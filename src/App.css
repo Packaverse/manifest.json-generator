@@ -1,0 +1,168 @@
+:root {
+  --bg: #0b0f1a;
+  --bg-light: #111827;
+  --bg-card: #1a1f2e;
+  --accent: #58a6ff;
+  --text: #f0f6fc;
+  --text-secondary: #8b949e;
+  --hover: #1f6feb;
+  --border: rgba(255, 255, 255, 0.1);
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  --glow: 0 0 20px rgba(88, 166, 255, 0.3);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.App {
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  color: var(--accent);
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
+  animation: fadeInUp 0.8s ease;
+}
+
+label {
+  display: block;
+  margin-top: 1.5rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+input, textarea {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-light);
+  color: var(--text);
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.2);
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+  background: var(--hover);
+  box-shadow: var(--glow);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  color: var(--text);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.subpack {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  position: relative;
+  box-shadow: var(--shadow);
+  animation: fadeInUp 0.4s ease;
+}
+
+.subpack .delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  background: #f44336;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.subpack .delete-btn:hover {
+  background: #e53935;
+}
+
+#downloadLink {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  animation: fadeInUp 0.6s ease;
+}
+
+#downloadLink a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+#downloadLink a:hover {
+  text-decoration: underline;
+}
+
+.preview {
+  margin-top: 3rem;
+}
+
+pre {
+  background: var(--bg-light);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: 12px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  max-height: 300px;
+  animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
